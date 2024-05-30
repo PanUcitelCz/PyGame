@@ -10,7 +10,7 @@ pygame.init()
 # Vytvoření obrazovky
 width = 600
 height = 300
-screen = pygame.display.set_mode((width, height)) # Nastavíme si velikost herního okna, v závorce je to z důvodu, že se jedná o tak zvaný cuple neboli dvojici
+screen = pygame.display.set_mode((width, height)) # Nastavíme si velikost herního okna, v závorce je to z důvodu, že se jedná o tak zvaný couples neboli dvojici
 pygame.display.set_caption("Naše první hra") # Nastavíme název hry v okně
 
 # Hlavní herní cyklus
