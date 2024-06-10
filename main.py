@@ -29,13 +29,13 @@ while lets_continue:
     
     key = pygame.key.get_pressed()
     
-    if key[pygame.K_a] == True:
+    if (key[pygame.K_a] or key[pygame.K_LEFT]) and player.left > 0:
         player.move_ip(-1, 0)
-    elif key[pygame.K_d] == True:
+    elif (key[pygame.K_d] or key[pygame.K_RIGHT]) and player.right < width:
         player.move_ip(1, 0)
-    elif key[pygame.K_w] == True:
+    elif (key[pygame.K_w]  or key[pygame.K_UP]) and player.top > 0:
         player.move_ip(0, -1)
-    elif key[pygame.K_s] == True:
+    elif (key[pygame.K_s] or key[pygame.K_DOWN]) and player.bottom < height:
         player.move_ip(0, 1)
     
     
@@ -50,7 +50,7 @@ while lets_continue:
     pygame.display.update()
     
     # Omezení snímkové frekvence na 60 FPS
-    clock.tick(60)
+    clock.tick(300)
 
 # Ukončení pygame
 pygame.quit()
